@@ -447,7 +447,7 @@ export class RegionsManager {
     }
 
     // REGIONS SELECTION
-    private selectRegion(region: Region) {
+    public selectRegion(region: Region) {
         if (region != null) {
             this.unselectRegions(region);
             region.select();
@@ -459,7 +459,7 @@ export class RegionsManager {
         }
     }
 
-    private selectAllRegions() {
+    public selectAllRegions() {
         let r = null;
         for (let i = 0; i < this.regions.length; i++) {
             let r = this.regions[i];
@@ -620,7 +620,7 @@ export class RegionsManager {
         }
     }
 
-    private unselectRegions(except?: Region) {
+    public unselectRegions(except?: Region) {
         for (var i = 0; i < this.regions.length; i++) {
             let r = this.regions[i];
             if (r != except) {
